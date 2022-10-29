@@ -1,0 +1,12 @@
+// molecules are relatively simple groups of UI
+// elements functioning together as a unit.
+
+.post_type-pagination{
+    text-align: center;
+    // padding: px 0 0 0;
+    margin: 35px 0 0 0;
+}
+
+.post_type-pagination > * {
+    padding: 0 10px;
+}

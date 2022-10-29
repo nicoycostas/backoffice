@@ -1,0 +1,24 @@
+.left-sidebar{
+    // padding-left: 35px;
+    margin-top: 14px;
+    // background-color: whitesmoke;
+    .note_category{
+        color:rgb(24, 24, 24);
+        list-style: none;
+        font-size: 21px;
+        position: relative;
+        left: 80px;
+        top: 20px;
+      
+        
+       a{
+           color: rgb(46, 46, 46);
+       }       
+   }
+}
+
+.post_type-posts{
+    padding-bottom: 80px;
+    width: 70%;
+    margin-left: 100px;
+}

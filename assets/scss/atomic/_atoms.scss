@@ -1,0 +1,46 @@
+// paragraphs, headings, ul, li, ol
+
+//START HEADINGS----
+// ----------------------
+    h1 {
+        font-family: 'Architects Daughter', cursive;
+
+    }
+
+    h2{
+        text-align: center;
+        font-family: 'Architects Daughter', cursive;
+        font-weight: 300;
+    }
+
+    h3{
+        font-weight: 300;
+        font-family: 'Lato', sans-serif;         
+        line-height: 60px;
+    }
+
+    h4{
+        font-weight: 300;           
+        line-height: 35px;
+    }
+
+
+//END HEADINGS----
+// ----------------------
+
+p{
+    font-weight: 300;
+    font-family: 'Lato', sans-serif;
+    font-size: 21px;
+    
+}
+
+ul,ol{
+    font-size: 19px;
+    font-weight: 300;
+    font-family: 'Lato', sans-serif;  
+    li{
+        padding: 5px 0;
+    }
+
+}
