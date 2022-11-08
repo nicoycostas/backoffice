@@ -15,8 +15,6 @@
         <div class="right-content-box col-10">
             <section class="post_type-posts">
 
-
-
             <?php 
                   //get the post's venues
                   $custom_terms = wp_get_post_terms($post->ID, 'journal_category');

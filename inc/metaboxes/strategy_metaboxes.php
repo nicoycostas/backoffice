@@ -55,13 +55,6 @@
             'type'    => 'wysiwyg',
         ) );
       
-        $strategy->add_field( array(
-            'name' => 'Finalized Strategy',
-            'desc' => '',
-            'default' => '',
-            'id' => 'complete_strategy',
-            'type'    => 'wysiwyg',
-        ) );
 
         // strategy analysis boxes
         $strategy_analysis = new_cmb2_box( array(
