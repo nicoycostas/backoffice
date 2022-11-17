@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
 <div class="container-fluid">
-<h2 class="post_type-posts-title">Journal</h2>
+<h2 class="post_type-posts-title">Goals</h2>
     <div class="row">
         <div class="left-sidebar col-2">
             <?php wp_list_categories( array(
                     'orderby'    => 'name',
-                    'taxonomy' => 'journal_category',
+                    'taxonomy' => 'decision_category',
                     'show_count' => false,
                 
             ) ); ?> 
@@ -17,7 +17,7 @@
                 
             <?php 
                   //get the post's venues
-                  $custom_terms = wp_get_post_terms($post->ID, 'journal_category');
+                  $custom_terms = wp_get_post_terms($post->ID, 'goal_category');
                
                   if( $custom_terms ){
                     // going to hold our tax_query params
@@ -26,7 +26,7 @@
                     // loop through venus and build a tax query
                     foreach( $custom_terms as $custom_term ) {
                         $tax_query[] = array(
-                            'taxonomy' => 'journal_category',
+                            'taxonomy' => 'goal_category',
                             'field' => 'slug',
                             'terms' => $custom_term->slug,
                             
@@ -35,7 +35,7 @@
 
                     $paged_tax = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
                     // put all the WP_Query args together
-                    $args = array( 'post_type' => 'journal',
+                    $args = array( 'post_type' => 'goal',
                     'posts_per_page' => 6,
                     'paged' => $paged_tax,
                     'tax_query' => $tax_query
@@ -48,7 +48,7 @@
                         while( $loop->have_posts() ) : $loop->the_post(); ?>
                         <article class="post_type-posts-article">
                             <div class="flexing">
-                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="book" class="svg-inline--fa fa-book fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z"></path></svg>
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bullseye" class="svg-inline--fa fa-bullseye fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm0 432c-101.69 0-184-82.29-184-184 0-101.69 82.29-184 184-184 101.69 0 184 82.29 184 184 0 101.69-82.29 184-184 184zm0-312c-70.69 0-128 57.31-128 128s57.31 128 128 128 128-57.31 128-128-57.31-128-128-128zm0 192c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64z"></path></svg>
                                 <!-- content -->
                                 <div class="article-content">
                                     <h3 class="post_type-posts-post-title"><?php the_title();?></h3>     
