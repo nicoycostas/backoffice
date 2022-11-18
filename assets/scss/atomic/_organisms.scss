@@ -53,15 +53,15 @@
     }
 
 // categories sidebar
-    .note_category, .journal_category, .strategy_category, .decision_category, .goal_category, .categories{
+    .centralpoint_category,.note_category, .journal_category,
+    .strategy_category,.decision_category, .goal_category, .categories{
         color:rgb(24, 24, 24);
         list-style: none;
         font-size: 21px;
         position: relative;
         left: 80px;
         top: 20px;
-        
-        
+
         a{
             color: rgb(46, 46, 46);
         }       

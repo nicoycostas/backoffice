@@ -92,7 +92,9 @@
     include 'inc/taxonomies/goals-taxonomy.php';
     include 'inc/taxonomies/decisions-taxonomy.php';
     include 'inc/taxonomies/strategies-taxonomy.php';
+    include 'inc/taxonomies/centralpoint-taxonomy.php';
     include 'inc/taxonomies/journal-taxonomy.php';
+
 
 
     //  PAGINATION PAGES FIX
@@ -141,6 +143,16 @@
         function wpse222471_query_post_type_note( $query5 )
         {
             if ( ! is_admin() && is_post_type_archive( 'note' ) && $query5->is_main_query() )
+            {
+                $query5->set( 'posts_per_page', 6 ); //set query arg ( key, value )
+            }
+        }
+
+        //centralpoint pagination fix
+        add_action( 'pre_get_posts' ,'wpse222471_query_post_type_centralpoint', 1, 1 );
+        function wpse222471_query_post_type_centralpoint( $query5 )
+        {
+            if ( ! is_admin() && is_post_type_archive( 'centralpoint' ) && $query5->is_main_query() )
             {
                 $query5->set( 'posts_per_page', 6 ); //set query arg ( key, value )
             }

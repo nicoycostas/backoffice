@@ -63,14 +63,16 @@ header nav.navbar {
         color: #242323;
         border-bottom: 1px solid #242424; }
 
-.note_category, .journal_category, .strategy_category, .decision_category, .goal_category, .categories {
+.centralpoint_category, .note_category, .journal_category,
+.strategy_category, .decision_category, .goal_category, .categories {
   color: #181818;
   list-style: none;
   font-size: 21px;
   position: relative;
   left: 80px;
   top: 20px; }
-  .note_category a, .journal_category a, .strategy_category a, .decision_category a, .goal_category a, .categories a {
+  .centralpoint_category a, .note_category a, .journal_category a,
+  .strategy_category a, .decision_category a, .goal_category a, .categories a {
     color: #2e2e2e; }
 
 .post_type-posts-article {

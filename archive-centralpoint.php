@@ -9,7 +9,7 @@
            
                 <?php wp_list_categories( array(
                     'orderby'    => 'name',
-                    'taxonomy' => 'note_category',
+                    'taxonomy' => 'centralpoint_category',
                     'show_count' => false,
                     
                 ) ); ?> 
