@@ -1,7 +1,11 @@
 <?php get_header(); ?>
 
 <div class="container-fluid">
-<h2 class="post_type-posts-title">Central Points</h2>
+   
+    <!-- showing title of taxonomy term -->
+    <?php $term = get_queried_object();  ?>
+    <h2 class="post_type-posts-title"><?php echo 'Central Points - ' . $term->name; // will show the name ?></h2>
+    <!-- showing title of taxonomy term -->
     <div class="row">
         <div class="left-sidebar col-2">
             <?php wp_list_categories( array(

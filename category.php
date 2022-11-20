@@ -1,7 +1,7 @@
 <?php get_header(); ?>
-
     <div class="container-fluid">
-        <h2 class="post_type-posts-title">Articles</h2>
+    <?php $term = get_queried_object();  ?>
+    <h2 class="post_type-posts-title"><?php echo 'Articles - ' . $term->name; // will show the name ?></h2>
         <div class="row">
             <!-- sidebar  -->
             <div class="left-sidebar col-2">
@@ -49,6 +49,5 @@
             </div>
         </div>
     </div>
-
 
 <?php get_footer(); ?>

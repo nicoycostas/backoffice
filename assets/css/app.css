@@ -37,6 +37,10 @@ ul, ol {
 .post_type-pagination {
   text-align: center;
   margin: 35px 0 0 0; }
+  .post_type-pagination .nav-links {
+    margin: 0 auto; }
+    .post_type-pagination .nav-links a {
+      padding: 0 10px; }
 
 .post_type-pagination > * {
   padding: 0 10px; }

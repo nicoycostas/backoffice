@@ -29,7 +29,7 @@
 
             <!-- dynamic menu -->            
             <ul class="nav justify-content-center">
-                <li class="nav-item"><a href="<?php echo get_home_url(); ?>" class="nav-link">Home</a> </li>
+                <li class="nav-item"><a href="<?php echo get_home_url(); ?>" class="nav-link">Articles</a> </li>
                 <li class="nav-item"><a href="<?php echo get_home_url(); ?>/journal" class="nav-link">Journal</a></li>
                 <li class="nav-item"><a href="<?php echo get_home_url(); ?>/note" class="nav-link">Notes</a></li>
                 <li class="nav-item"><a href="<?php echo get_home_url(); ?>/centralpoint" class="nav-link">Central Points</a></li>
