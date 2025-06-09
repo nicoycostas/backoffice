@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+    <?php get_template_part('template-parts/content', 'header'); ?>
     <!-- start loop -->
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -112,5 +112,5 @@
     <!-- end loop -->
 
 
-
+    <?php get_template_part('template-parts/content', 'footer'); ?>
 <?php get_footer(); ?>

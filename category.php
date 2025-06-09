@@ -1,10 +1,11 @@
 <?php get_header(); ?>
     <div class="container-fluid">
-    <?php $term = get_queried_object();  ?>
-    <h2 class="post_type-posts-title"><?php echo 'Articles - ' . $term->name; // will show the name ?></h2>
+        <?php $term = get_queried_object();  ?>
+        
+      
         <div class="row">
             <!-- sidebar  -->
-            <div class="left-sidebar col-2">
+            <div class="left-sidebar">
                 <?php wp_list_categories( array(
                     'orderby'    => 'name',
                    
@@ -13,10 +14,10 @@
                 ) ); ?> 
             </div>
 
-            <div class="right-content-box col-10">
+            <div class="right-content-box">
                 <section class="post_type-posts">
-        
-
+                    <?php get_template_part('template-parts/content', 'header'); ?>
+                      <h2 class="post_type-posts-title"><?php echo 'Articles - ' . $term->name; // will show the name ?></h2>
                     <!-- articles loop -->
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                         <article class="post_type-posts-article">

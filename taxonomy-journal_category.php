@@ -4,11 +4,11 @@
 
     <!-- showing title of taxonomy term -->
     <?php $term = get_queried_object();  ?>
-    <h2 class="post_type-posts-title"><?php echo 'Journal - ' . $term->name; // will show the name ?></h2>
+  
     <!-- showing title of taxonomy term -->
     <div class="row">
 
-        <div class="left-sidebar col-2">
+        <div class="left-sidebar">
             <?php wp_list_categories( array(
                     'orderby'    => 'name',
                     'taxonomy' => 'journal_category',
@@ -17,9 +17,11 @@
             ) ); ?> 
         </div>
 
-        <div class="right-content-box col-10">
+        <div class="right-content-box">
+             
             <section class="post_type-posts">
-                
+                 <?php get_template_part('template-parts/content', 'header'); ?>
+                <h2 class="post_type-posts-title"><?php echo 'Journal - ' . $term->name; // will show the name ?></h2>
             <?php 
                   //get the post's venues
                   $custom_terms = wp_get_post_terms($post->ID, 'journal_category');

@@ -2,9 +2,9 @@
 <!-- // select the post type -->
 
 <div class="container-fluid">
-    <h2 class="post_type-posts-title"><?php echo post_type_archive_title( '', false );?>s</h2>
+   
     <div class="row">
-        <div class="left-sidebar col-2">
+        <div class="left-sidebar">
             <!-- get and display custom post taxonomies -->
            
                 <?php wp_list_categories( array(
@@ -17,10 +17,11 @@
         
         </div>
 
-        <div class="right-content-box col-10">
+        <div class="right-content-box">
             <section class="post_type-posts">
 
-
+                <?php get_template_part('template-parts/content', 'header'); ?>
+                 <h2 class="post_type-posts-title"><?php echo post_type_archive_title( '', false );?>s</h2>
                 <!-- paged var to create pagination -->
                 <?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; ?>
                 <?php $loop = new WP_Query( array
@@ -80,7 +81,7 @@
 
             </section>
 
-        
+            <?php get_template_part('template-parts/content', 'footer'); ?>
         </div>
 
     </div>

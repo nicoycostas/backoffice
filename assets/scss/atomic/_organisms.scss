@@ -14,56 +14,70 @@
         
             
         }
-        
-        nav.navbar{
-            width: 80%;
-            margin: 0 auto;
-        
-        
-            img{
-                border-radius: 50%;
-                width: 130px;
-                height: 130px;
-            }
-        
-            .nav{
+        .nav{
             
                 position: relative;
-                right: 15%;
-        
-                li a{
-                    text-transform: uppercase;
-                    color: rgb(61, 61, 61);
+                // right: 15%;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin: 0 auto;
+                img{
+                    border-radius: 50%;
+                    width: 130px;
+                    height: 130px;
+                    float: left;
+                }
 
-                    &:hover{
-                        color: rgb(36, 35, 35);
-                        border-bottom: 1px solid rgb(36, 36, 36) ;
-                        // background-color: black;
-                        // color: white;
+                .menu{
+                   
+                    // background-color: rebeccapurple;
+                    display: flex;
+                    list-style: none;
+                    position: relative;
+                    top: 30px;
 
-                      
+                    li a{
+                        text-transform: uppercase;
+                        color: rgb(61, 61, 61);
+
+                        &:hover{
+                            color: rgb(36, 35, 35);
+                            border-bottom: 1px solid rgb(36, 36, 36) ;
+                            // background-color: black;
+                            // color: white
 
                     }
                 }
+
+                }
+
+              
+        
+                clear: both;
         
             
                 
             }
-        }
+       
     }
 
 // categories sidebar
     .centralpoint_category,.note_category, .journal_category,
     .strategy_category,.decision_category, .goal_category, .categories{
-        color:rgb(24, 24, 24);
+       color: white;
         list-style: none;
         font-size: 21px;
         position: relative;
         left: 80px;
         top: 20px;
+        position: relative;
+        left: 80px;
+        top: 10%;
+        color: white;
 
         a{
-            color: rgb(46, 46, 46);
+            color: white;
         }       
     }
 
@@ -106,7 +120,7 @@
         .post_type-single-article-content{
 
             padding: 30px 50px 80px 50px;
-
+            min-height: 500px;
             h2{
                 font-weight: 300;
                 font-family: 'Lato', sans-serif;

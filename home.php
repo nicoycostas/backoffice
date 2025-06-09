@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
-    <div class="container-fluid">
-        <h2 class="post_type-posts-title">Articles</h2>
+    <div class="">
+        
         <div class="row">
             <!-- sidebar  -->
-            <div class="left-sidebar col-2">
+            <div class="left-sidebar">
                 <?php wp_list_categories( array(
                     'orderby'    => 'name',
                    
@@ -13,10 +13,11 @@
                 ) ); ?> 
             </div>
 
-            <div class="right-content-box col-10">
+            <div class="right-content-box">
                 <section class="post_type-posts">
         
-
+                     <?php get_template_part('template-parts/content', 'header'); ?>
+                    <h2 class="post_type-posts-title">Articles</h2>
                     <!-- articles loop -->
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                         <article class="post_type-posts-article">
@@ -46,6 +47,8 @@
                    
         
                 </section>
+
+                <?php get_template_part('template-parts/content', 'footer'); ?>
             </div>
         </div>
     </div>

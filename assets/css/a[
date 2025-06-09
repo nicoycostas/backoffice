@@ -54,7 +54,7 @@ header .header-title {
 header .nav {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
   margin: 0 auto;
   clear: both; }
@@ -109,8 +109,7 @@ header .nav {
   font-weight: 300;
   font-family: 'Lato', sans-serif; }
 .post_type-single-article .post_type-single-article-content {
-  padding: 30px 50px 80px 50px;
-  min-height: 500px; }
+  padding: 30px 50px 80px 50px; }
   .post_type-single-article .post_type-single-article-content h2 {
     font-weight: 300;
     font-family: 'Lato', sans-serif;
@@ -213,4 +212,4 @@ footer {
   margin-left: 100px;
   min-height: 100vh; }
 
-/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=a[.map */
